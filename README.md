@@ -40,13 +40,87 @@ Ensure Python 3.8+ and `pip` are installed on your system.
 ```bash
 git clone [https://github.com/rameswarbehera00/bitcoin-market-analytics-prediction.git](https://github.com/rameswarbehera00/bitcoin-market-analytics-prediction.git)
 cd bitcoin-market-analytics-prediction
-Step 2: Install Required DependenciesInstall the required packages using the provided requirements.txt:Bashpip install -r requirements.txt
-Step 3: Dataset Configuration (Optional)Download btcusd_1-min_data.csv from Kaggle and place it directly into the project directory.Note: If the large CSV is not present locally, the notebook includes an automated synthetic baseline generator that initializes time-series parameters so all code cells, metrics, and visual plots execute seamlessly without errors.Step 4: Run the AnalysisLaunch Jupyter Notebook or VS Code and execute the notebook:Bashjupyter notebook Rameswar_BitcoinAnalytics.ipynb
-Select Run All Cells to view the inline KPI metrics, data tables, exploratory distribution charts, and model evaluation reports.5. Key Findings & Strategic InsightsExecutive Market KPIs (Level 1)Latest Close Valuation: Establishes benchmark asset pricing.Drawdown from All-Time High (ATH): Quantifies capital impairment from peak levels:$$\text{Drawdown (\%)} = \frac{\text{Latest Close} - \text{ATH}}{\text{ATH}} \times 100 \approx -31.56\%$$30-Day Trailing Return: Demonstrates medium-term price momentum (+10.04%).Annualized 30-Day Volatility: Measures market turbulence ($\approx 43.28\%$).Technical Trends & Market Drivers (Levels 2 & 3)Moving Average Trends: Golden crosses (20-day SMA crossing above 50-day SMA) confirm sustained multi-week upward momentum, while price breakdowns below the 50-day SMA signal impending consolidation.Volume vs. Return Distribution: Extreme daily percentage swings correlate with volume spikes, whereas steady price accumulation occurs during lower-volume consolidation bands.Predictive Model Performance (Level 4)Model Architecture: Random Forest Classifier (100 estimators, max depth = 6).Validation Scheme: Chronological time-series split (80% training set, 20% hold-out test set) to prevent look-ahead bias.Directional Classification Accuracy: Achieved balanced directional accuracy ($\approx 49\% - 53\%$) with detailed precision, recall, and confusion matrix outputs, consistent with financial market benchmarks under efficient market hypothesis conditions.Strategic Action Plan (Level 5)Capital Preservation Trigger: When 30-day annualized volatility exceeds 65%, portfolio allocation algorithms switch to risk-off asset preservation.Accumulation Trigger: Automated Dollar-Cost Averaging (DCA) is initiated during low-volatility accumulation bands when prices hold above the 50-day SMA.Stop-Loss Execution: Trailing stop-loss orders are dynamically triggered whenever daily close prices drop below the 50-day moving average.6. Repository File StructurePlaintextbitcoin-market-analytics-prediction/
+
+```
+
+### Step 2: Install Required Dependencies
+
+Install the required packages using the provided `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+
+```
+
+### Step 3: Dataset Configuration (Optional)
+
+* Download `btcusd_1-min_data.csv` from Kaggle and place it directly into the project directory.
+* *Note:* If the large CSV is not present locally, the notebook includes an automated synthetic baseline generator that initializes time-series parameters so all code cells, metrics, and visual plots execute seamlessly without errors.
+
+### Step 4: Run the Analysis
+
+Launch Jupyter Notebook or VS Code and execute the notebook:
+
+```bash
+jupyter notebook RameswarBehera_BitcoinAnalytics.ipynb
+
+```
+
+Select **Run All Cells** to view the inline KPI metrics, data tables, exploratory distribution charts, and model evaluation reports.
+
+---
+
+## 5. Key Findings & Strategic Insights
+
+### Executive Market KPIs (Level 1)
+
+* **Latest Close Valuation:** Establishes benchmark asset pricing.
+* **Drawdown from All-Time High (ATH):** Quantifies capital impairment from peak levels:
+
+$$\text{Drawdown (\%)} = \frac{\text{Latest Close} - \text{ATH}}{\text{ATH}} \times 100 \approx -31.56\%$$
+
+
+* **30-Day Trailing Return:** Demonstrates medium-term price momentum (+10.04%).
+* **Annualized 30-Day Volatility:** Measures market turbulence ($\approx 43.28\%$).
+
+### Technical Trends & Market Drivers (Levels 2 & 3)
+
+* **Moving Average Trends:** Golden crosses (20-day SMA crossing above 50-day SMA) confirm sustained multi-week upward momentum, while price breakdowns below the 50-day SMA signal impending consolidation.
+* **Volume vs. Return Distribution:** Extreme daily percentage swings correlate with volume spikes, whereas steady price accumulation occurs during lower-volume consolidation bands.
+
+### Predictive Model Performance (Level 4)
+
+* **Model Architecture:** Random Forest Classifier (100 estimators, max depth = 6).
+* **Validation Scheme:** Chronological time-series split (80% training set, 20% hold-out test set) to prevent look-ahead bias.
+* **Directional Classification Accuracy:** Achieved balanced directional accuracy ($\approx 49\% - 53\%$) with detailed precision, recall, and confusion matrix outputs, consistent with financial market benchmarks under efficient market hypothesis conditions.
+
+### Strategic Action Plan (Level 5)
+
+* **Capital Preservation Trigger:** When 30-day annualized volatility exceeds 65%, portfolio allocation algorithms switch to risk-off asset preservation.
+* **Accumulation Trigger:** Automated Dollar-Cost Averaging (DCA) is initiated during low-volatility accumulation bands when prices hold above the 50-day SMA.
+* **Stop-Loss Execution:** Trailing stop-loss orders are dynamically triggered whenever daily close prices drop below the 50-day moving average.
+
+---
+
+## 6. Repository File Structure
+
+```text
+bitcoin-market-analytics-prediction/
 ├── .gitignore                          # Ignores large CSV files, cache, and virtual environments
 ├── LICENSE                             # MIT Open Source License
 ├── README.md                           # Comprehensive project documentation
 ├── requirements.txt                    # Project dependencies and library versions
-├── Rameswar_BitcoinAnalytics.ipynb     # Fully executed Jupyter Notebook with inline visualizations
-└── Rameswar_ProjectReport.docx         # Formal Word project report with embedded charts
-7. Author InformationCandidate Name: Rameswar BeheraBranch / Specialization: Computer Science and EngineeringInstitution: Indira Gandhi Institute of Technology, Sarang, Odisha (PIN: 759146)Program: AICTE | IBM SkillsBuild Data Analytics with AI Internship 2026 (BharatCares)GitHub Profile: @rameswarbehera00
+├── RameswarBehera_BitcoinAnalytics.ipynb # Fully executed Jupyter Notebook with inline visualizations
+└── RameswarBehera_ProjectReport.docx    # Formal Word project report with embedded charts
+
+```
+
+---
+
+## 7. Author Information
+
+* **Candidate Name:** Rameswar Behera
+* **Branch / Specialization:** Computer Science and Engineering
+* **Institution:** Indira Gandhi Institute of Technology, Sarang, Odisha (PIN: 759146)
+* **Program:** AICTE | IBM SkillsBuild Data Analytics with AI Internship 2026 (BharatCares)
+* **GitHub Profile:** [@rameswarbehera00](https://github.com/rameswarbehera00?utm_source=gemini)
